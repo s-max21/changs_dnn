@@ -1,0 +1,46 @@
+# Ignore data files
+data/
+
+# Ignore output/results files
+results/
+*.csv
+*.h5
+*.json
+*.npz
+*.zip
+
+# Ignore checkpoints and logs
+checkpoints/
+logs/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary or backup files
+*.tmp
+*.bak
+*.swp
+
+# Ignore environment and dependency files
+.env
+.venv/
+__pycache__/
+*.pyc
+
+
+# Ignore specific notebooks directories for tuning
+notebooks/dnn_0.05_100_tuning/
+notebooks/dnn_old/
+notebooks/nn_1_0.05_100_tuning/
+notebooks/nn_1_0.05_200_tuning/
+notebooks/nn_1_0.2_100_tuning/
+notebooks/nn_1_0.2_200_tuning/
+notebooks/nn_3_0.05_100_tuning/
+notebooks/nn_3_0.05_200_tuning/
+notebooks/nn_3_0.2_100_tuning/
+notebooks/nn_3_0.2_200_tuning/
+notebooks/nn_6_0.05_100_tuning/
+notebooks/nn_6_0.05_200_tuning/
+notebooks/nn_6_0.2_100_tuning/
+notebooks/nn_6_0.2_200_tuning/
+notebooks/nn_tuning_dir/
