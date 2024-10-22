@@ -133,15 +133,7 @@ def create_dnn(
     input_shape = (d,)
     n, d = float(n), float(d)
 
-    # Create a list containing n_networks DNNs with n_layers hidden layers
-    def build_network_parallel():
-        # Create a list containing n_networks DNNs with n_layers hidden layers in parallel
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = [executor.submit(create_network, n, d, n_units, n_layers, network_id) for network_id in range(n_networks)]
-            sub_networks = [future.result() for future in concurrent.futures.as_completed(futures)]
-        return sub_networks
-    
-    sub_networks = build_network_parallel()
+    sub_networks = [create_network(n, d, n_units, n_layers, network_id) for network_id in range(n_networks)]
 
     # Create the output layer
     output_layer = Dense(
